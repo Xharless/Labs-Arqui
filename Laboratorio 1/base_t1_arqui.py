@@ -6,6 +6,7 @@ def crear_mapa(size,cantidad_naves):
     lista = []
     for i in range(0,size*2):
         row = []
+        
         for j in range(0,size):
             row.append('?')
         lista.append(row)
