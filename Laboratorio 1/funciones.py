@@ -1,8 +1,31 @@
 import random
 from prettytable import PrettyTable
 
-def verificar_mapa():
-    print("si")
+def verificar_mapa(coor_x, coor_y, mapa, opcion):
+    # 'E' de ELIMINATED o ELIMINADO
+    # Verifico si la opcion marcada coincide con el barco en cuestion
+        
+    try:
+        if mapa[coor_x][coor_y] == 'X' and opcion == '1':
+            mapa[coor_x][coor_y] = 'E'
+            print("Barco fuera!!")
+            return mapa
+
+        elif mapa[coor_x][coor_y] == 'Y' and opcion == '2':
+            mapa[coor_x][coor_y] = 'E'
+            print("Barco fuera!!")
+            return mapa
+
+        elif mapa[coor_x][coor_y] == 'Z' and opcion == '3':
+            mapa[coor_x][coor_y] = 'E'
+            print("Barco fuera!!")
+            return mapa
+
+        else:
+            return print("Erraste :C")
+        
+    except:
+        print("Te excediste del mapa!!")    
     
 def bin_dec(coor_x, coor_y):
     largo_x = len(coor_x) 
@@ -66,5 +89,3 @@ def hexa_dec(coor_x, coor_y):
                 largo_y -= 1
     
     return (x_decimal,y_decimal)
-    
-

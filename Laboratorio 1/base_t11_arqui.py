@@ -34,48 +34,57 @@ def visualizar_mapa(lista):
         row_data = [numberfila] + row
         tabla.add_row(row_data)
 
-    
     print(tabla)
 
 
-juego,enemigos = crear_mapa(10,250)
-visualizar_mapa(juego)
+tamano = input("Tamano del tablero: ")
+cant_enemigos = input("Cantidad de enemigos: ")
 
+try:
+    juego,enemigos = crear_mapa(int(tamano),int(cant_enemigos))
+    print(enemigos)
 
-flag = True
-while flag: 
-    print("Escoge en que base deseas trabajar: ")
-    print("Opcion 1: Base binaria (X)")
-    print("Opcion 2: Base octal (Y)")
-    print("Opcion 3: Base hexadecimal (Z)")
-    print("Opcion 4: Salir")
-    print('\n')
-    opcion = input("Escoge una opcion: ")
-    
+    flag = True
+    while flag:
+        visualizar_mapa(juego)
 
-    if opcion == "1":
-        #funcion binario
-        coordenadas_x = input("Coordenadas en X?: ")
-        coordenadas_y = input("Coordenadas en Y?: ")
-        x = bin_dec(coordenadas_x,coordenadas_y)
-        print(x)
+        print("Escoge en que base deseas trabajar: ")
+        print("Opcion 1: Base binaria (X)")
+        print("Opcion 2: Base octal (Y)")
+        print("Opcion 3: Base hexadecimal (Z)")
+        print("Opcion 4: Salir")
+        print('\n')
+        opcion = input("Escoge una opcion: ")
+        
+        if opcion == "1":
+            #funcion binario
+            coordenadas_x = input("Coordenadas en X?: ")
+            coordenadas_y = input("Coordenadas en Y?: ")
+            resultado = bin_dec(coordenadas_x,coordenadas_y)
+            print(resultado)
+            verificar_mapa(resultado[0],resultado[1],juego,opcion)
 
-    elif opcion == "2":
-        #funcion octal 
-        coordenadas_x = input("Coordenadas en X?: ")
-        coordenadas_y = input("Coordenadas en Y?: ")
-        x = octal_dec(coordenadas_x,coordenadas_y)
-        print(x)
+        elif opcion == "2":
+            #funcion octal 
+            coordenadas_x = input("Coordenadas en X?: ")
+            coordenadas_y = input("Coordenadas en Y?: ")
+            resultado = octal_dec(coordenadas_x,coordenadas_y)
+            print(resultado)
+            verificar_mapa(resultado[0],resultado[1],juego,opcion)
 
-    elif opcion == "3":
-        #funcion hexadecimal 
-        coordenadas_x = input("Coordenadas en X?: ")
-        coordenadas_y = input("Coordenadas en Y?: ")
-        x = hexa_dec(coordenadas_x,coordenadas_y)
-        print(x)
+        elif opcion == "3":
+            #funcion hexadecimal 
+            coordenadas_x = input("Coordenadas en X?: ")
+            coordenadas_y = input("Coordenadas en Y?: ")
+            resultado = hexa_dec(coordenadas_x,coordenadas_y)
+            print(resultado)
+            verificar_mapa(resultado[0],resultado[1],juego,opcion)
 
-    elif opcion == "4":
-        flag = False
+        elif opcion == "4":
+            flag = False
 
-    else:
-        print("Escoge una opcion valida")
+        else:
+            print("Escoge una opcion valida")
+
+except:
+    print("Ingresa un numero entero")
