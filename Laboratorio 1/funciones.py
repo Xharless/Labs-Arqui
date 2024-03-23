@@ -8,18 +8,17 @@ def verificar_mapa(coor_x, coor_y, mapa, opcion):
     try:
         if mapa[coor_x][coor_y] == 'X' and opcion == '1':
             mapa[coor_x][coor_y] = 'E'
-            print("Barco fuera!!")
-            return mapa
+            return "Barco fuera!!"
 
         elif mapa[coor_x][coor_y] == 'Y' and opcion == '2':
             mapa[coor_x][coor_y] = 'E'
-            print("Barco fuera!!")
-            return mapa
+            return "Barco fuera!!"
+            
 
         elif mapa[coor_x][coor_y] == 'Z' and opcion == '3':
             mapa[coor_x][coor_y] = 'E'
-            print("Barco fuera!!")
-            return mapa
+            return "Barco fuera!!"
+            
 
         else:
             return print("Erraste :C")

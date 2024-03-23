@@ -39,15 +39,22 @@ def visualizar_mapa(lista):
 
 tamano = input("Tamano del tablero: ")
 cant_enemigos = input("Cantidad de enemigos: ")
-
+cant_bajados = 0
 try:
     juego,enemigos = crear_mapa(int(tamano),int(cant_enemigos))
     print(enemigos)
-
     flag = True
     while flag:
-        visualizar_mapa(juego)
+        
+        visualizar_mapa(juego) 
 
+        if int(cant_enemigos) == cant_bajados:
+            print("")
+            print("-----------------------------")
+            print("¡HAS GANADO, FELICIDADES!")
+            print("-----------------------------")
+            break
+        
         print("Escoge en que base deseas trabajar: ")
         print("Opcion 1: Base binaria (X)")
         print("Opcion 2: Base octal (Y)")
@@ -62,7 +69,9 @@ try:
             coordenadas_y = input("Coordenadas en Y?: ")
             resultado = bin_dec(coordenadas_x,coordenadas_y)
             print(resultado)
-            verificar_mapa(resultado[0],resultado[1],juego,opcion)
+            x = verificar_mapa(resultado[0],resultado[1],juego,opcion)
+            if x == "Barco fuera!!":
+                cant_bajados+=1
 
         elif opcion == "2":
             #funcion octal 
@@ -70,7 +79,9 @@ try:
             coordenadas_y = input("Coordenadas en Y?: ")
             resultado = octal_dec(coordenadas_x,coordenadas_y)
             print(resultado)
-            verificar_mapa(resultado[0],resultado[1],juego,opcion)
+            y = verificar_mapa(resultado[0],resultado[1],juego,opcion)
+            if y == "Barco fuera!!":
+                cant_bajados+=1
 
         elif opcion == "3":
             #funcion hexadecimal 
@@ -78,11 +89,14 @@ try:
             coordenadas_y = input("Coordenadas en Y?: ")
             resultado = hexa_dec(coordenadas_x,coordenadas_y)
             print(resultado)
-            verificar_mapa(resultado[0],resultado[1],juego,opcion)
+            z = verificar_mapa(resultado[0],resultado[1],juego,opcion)
+            if z == "Barco fuera!!":
+                cant_bajados+=1
+
 
         elif opcion == "4":
             flag = False
-
+        
         else:
             print("Escoge una opcion valida")
 
