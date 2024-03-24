@@ -40,9 +40,10 @@ def visualizar_mapa(lista):
 tamano = input("Tamano del tablero: ")
 cant_enemigos = input("Cantidad de enemigos: ")
 cant_bajados = 0
+
 try:
     juego,enemigos = crear_mapa(int(tamano),int(cant_enemigos))
-    print(enemigos)
+
     flag = True
     while flag:
         
@@ -68,9 +69,10 @@ try:
             coordenadas_x = input("Coordenadas en X?: ")
             coordenadas_y = input("Coordenadas en Y?: ")
             resultado = bin_dec(coordenadas_x,coordenadas_y)
-            print(resultado)
+            
             x = verificar_mapa(resultado[0],resultado[1],juego,opcion)
             if x == "Barco fuera!!":
+                print(x)
                 cant_bajados+=1
 
         elif opcion == "2":
@@ -78,9 +80,10 @@ try:
             coordenadas_x = input("Coordenadas en X?: ")
             coordenadas_y = input("Coordenadas en Y?: ")
             resultado = octal_dec(coordenadas_x,coordenadas_y)
-            print(resultado)
+            
             y = verificar_mapa(resultado[0],resultado[1],juego,opcion)
             if y == "Barco fuera!!":
+                print(y)
                 cant_bajados+=1
 
         elif opcion == "3":
@@ -88,9 +91,10 @@ try:
             coordenadas_x = input("Coordenadas en X?: ")
             coordenadas_y = input("Coordenadas en Y?: ")
             resultado = hexa_dec(coordenadas_x,coordenadas_y)
-            print(resultado)
+            
             z = verificar_mapa(resultado[0],resultado[1],juego,opcion)
             if z == "Barco fuera!!":
+                print(z)
                 cant_bajados+=1
 
 
