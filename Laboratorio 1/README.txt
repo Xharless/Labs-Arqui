@@ -5,7 +5,7 @@ Datos personales:
 	- ROL USM: 202173575-5
 
    	- Nombre: Carlos Arévalo
-    - ROL USM: 202173501-1
+        - ROL USM: 202173501-1
 
 Detalles del programa: 
 	- Se asumira que el usuario no va a perder "vidas" si se equivoca de barco.
