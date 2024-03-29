@@ -1,6 +1,19 @@
 import random
 from prettytable import PrettyTable
 
+
+'''
+verificar_mapa
+———————–
+coor_x: int
+coor_y: int
+mapa: lista
+opcion: str
+————————
+Comprueba que las coordenadas ingresadas esten dentro del mapa,
+ademas verifica si la opcion escogida corresponde al barco ha destruir.
+Retorna un string indicando si erraste o lo eliminaste.
+'''
 def verificar_mapa(coor_x, coor_y, mapa, opcion):
     # 'E' de ELIMINATED o ELIMINADO
     # Verifico si la opcion marcada coincide con el barco en cuestion
@@ -25,7 +38,18 @@ def verificar_mapa(coor_x, coor_y, mapa, opcion):
         
     except:
         print("Te excediste del mapa!!")    
-    
+
+
+'''
+bin_dec
+———————–
+coor_x: str
+coor_y: str
+————————
+Recorre ambas coordenadas que estan en binario, transformando uno por uno
+los numeros a decimal utilizando las potencias del 2. Retorna una tupla con
+las coordenadas x e y en int.
+'''
 def bin_dec(coor_x, coor_y):
     largo_x = len(coor_x) 
     largo_y = len(coor_y)
@@ -44,6 +68,17 @@ def bin_dec(coor_x, coor_y):
     
     return (x_decimal,y_decimal)
 
+
+'''
+octal_dec
+———————–
+coor_x: str
+coor_y: str
+————————
+Recorre ambas coordenadas que estan en octal, transformando uno por uno
+los numeros a decimal utilizando las potencias del 8. Retorna una tupla con
+las coordenadas x e y en int.
+'''
 def octal_dec(coor_x, coor_y):
     largo_x = len(coor_x)
     largo_y = len(coor_y)
@@ -62,6 +97,19 @@ def octal_dec(coor_x, coor_y):
 
     return (x_decimal,y_decimal)
 
+
+'''
+hexa_dec
+———————–
+coor_x: str
+coor_y: str
+————————
+Se tiene un diccionario con las letras y su respectivo valor decimal.
+Recorre ambas coordenadas que estan en hexadecimal, transformando uno por uno
+los numeros a decimal utilizando las potencias del 16, verifica si es una letra
+o un numero para utilizar su valor decimal. Retorna una tupla con las coordenadas
+x e y en int.
+'''
 def hexa_dec(coor_x, coor_y):
     letras = {"A": 10, "B": 11, "C": 12, "D": 13, "E": 14, "F": 15}
     largo_x = len(coor_x)
