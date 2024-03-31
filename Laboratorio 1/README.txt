@@ -23,3 +23,5 @@ Detalles del programa:
 	- Cuando un barco ha sido hundido, se reemplaza la letra por un 'E' que indica que ese barco ha sido hundido.
 
 	- Se asumira que el usuario ingresara un tamano y cantidad de enemigos mayor a 0.
+
+	- Se ingreso que en el caso de ingresar letras en hexadecimal en minusculas, estas seran cambiabas a mayusculas para un correcto funcionamiento
