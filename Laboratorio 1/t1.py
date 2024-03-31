@@ -228,7 +228,7 @@ try:
             #funcion hexadecimal 
             coordenadas_x = input("Coordenadas en X?: ")
             coordenadas_y = input("Coordenadas en Y?: ")
-            resultado = hexa_dec(coordenadas_x,coordenadas_y)
+            resultado = hexa_dec(coordenadas_x.upper(),coordenadas_y.upper())
             
             z = verificar_mapa(resultado[0],resultado[1],juego,opcion)
             if z == "Barco fuera!!":

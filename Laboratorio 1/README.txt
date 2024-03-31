@@ -8,8 +8,6 @@ Datos personales:
         - ROL USM: 202173501-1
 
 Detalles del programa: 
-	- Incluimos un archivo "funciones.py" para mayor orden de la tarea, cada funcion del archivo esta comentada.
-
 	- Al ingresar un hexadecimal, se asumira que no sera necesario utilizar el prefijo "0x".
 
 	- Se asumira que el usuario no va a perder "vidas" si se equivoca de barco y que no existen "turnos", simplemente se dejara que el usuario pueda eliminar todos los barcos.
@@ -23,3 +21,5 @@ Detalles del programa:
 	- Se ha agregado un mensaje que muestra cuando has hundido todos los barcos.
 
 	- Cuando un barco ha sido hundido, se reemplaza la letra por un 'E' que indica que ese barco ha sido hundido.
+
+	- Se asumira que el usuario ingresara un tamano y cantidad de enemigos mayor a 0.
