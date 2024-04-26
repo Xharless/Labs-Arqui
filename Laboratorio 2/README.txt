@@ -8,4 +8,4 @@ Datos personales:
         - ROL USM: 202173501-1
 
 Detalles del programa: 
-alguna wea xd
+	Se considerará que al llegar al estado 15, pasara al estado 0.
