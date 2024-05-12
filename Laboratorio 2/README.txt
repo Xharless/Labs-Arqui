@@ -18,4 +18,8 @@ Detalles del programa:
 
 Informe:
 	- Contiene los mapas de Karnough correspondientes al de salida y cambios de estado, para este último se utilizó Flip Flop D.
+<<<<<<< HEAD
 	- Los bits de salida son según el apunte.
+=======
+	- Los bits de salida son según el apunte.
+>>>>>>> ff08efacff8905e074524e6b2750cf9807457dde
