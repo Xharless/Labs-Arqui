@@ -6,3 +6,15 @@ Datos personales:
 
    	- Nombre: Carlos Arévalo
         - ROL USM: 202173501-1
+
+Detalles de uso del programa:
+	
+	- 
+
+
+Consideraciones:
+
+	- 
+
+Detalles de las herramientas usadas:
+	- Sistema Operativo (SO):
